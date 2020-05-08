@@ -41,7 +41,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'active_model_serializers'
 gem 'devise_token_auth'
 
-
+gem 'Node.js', '>=10.13.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,8 +49,14 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'annotate'
+<<<<<<< HEAD
   gem 'factory_bot_rails'
   gem 'faker'
+=======
+  gem 'rspec-rails'
+  gem 'faker'
+  gem 'factory_bot_rails'
+>>>>>>> b5e219f7efbdc97787b7355796e75950446dd12e
 end
 
 group :development do
