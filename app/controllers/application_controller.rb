@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+        include DeviseTokenAuth::Concerns::SetUserByToken
   config.generators do |g|
     g.template_engine false
     g.javascripts false
