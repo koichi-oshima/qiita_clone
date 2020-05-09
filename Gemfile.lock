@@ -270,8 +270,8 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
-  rspec-rails
   rails-erd
+  rspec-rails
   rubocop-rails
   rubocop-rspec
   sass-rails (~> 5.0)
