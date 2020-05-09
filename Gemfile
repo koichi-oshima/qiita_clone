@@ -49,6 +49,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'annotate'
+  gem 'rails-erd'
 end
 
 group :development do
