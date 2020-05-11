@@ -13,7 +13,7 @@ RSpec.describe Comment, type: :model do
     context "コメントが入力されていない場合" do
       let(:comment) { build(:comment, body: nil) }
       it "エラーになる" do
-        comment.valid?
+        expect(comment).not_to be_valid
         expect(comment.errors.messages[:body]).to include "can't be blank"
       end
     end
