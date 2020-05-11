@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '0.10'
 gem 'devise_token_auth'
 
 
