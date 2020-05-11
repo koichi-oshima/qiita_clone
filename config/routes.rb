@@ -24,11 +24,11 @@
 #      rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
 
 Rails.application.routes.draw do
-  mount_devise_token_auth_for "User", at: "auth"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # namespaceを利用することで、 /api/v1/each_api 形式のrouting設定を行う
   namespace :api, format: 'json' do
     namespace :v1 do
+      mount_devise_token_auth_for 'User', at: 'auth'
       resources :articles
     end
   end
