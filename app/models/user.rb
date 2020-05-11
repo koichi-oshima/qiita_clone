@@ -43,9 +43,9 @@ class User < ActiveRecord::Base
   has_many :article_likes, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true
-  validates :name, presence: true, length: { in: 1..30 }
+  validates :name, presence: true, length: { in: 3..20 }
 
   # 半角英数字大文字小文字をそれぞれ1文字以上含む
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,16}+\z/.freeze
-  validates :password, format: { with: VALID_PASSWORD_REGEX }, length: { in: 5..20 }
+  validates :password, presence: true, format: { with: VALID_PASSWORD_REGEX }, length: { in: 8..20 }
 end
