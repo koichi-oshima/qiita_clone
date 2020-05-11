@@ -1,14 +1,15 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Comment, type: :model do
   describe "正常系" do
     context "コメントが入力されている場合" do
-       let(:comment) { build(:comment) }
+      let(:comment) { build(:comment) }
       it "コメント投稿できる" do
         expect(comment).to be_valid
       end
     end
   end
+
   describe "異常系" do
     context "コメントが入力されていない場合" do
       let(:comment) { build(:comment, body: nil) }
