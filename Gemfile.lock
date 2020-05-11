@@ -68,6 +68,9 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
+    debase (0.2.4.1)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (0.10.9)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -204,6 +207,8 @@ GEM
       rubocop (>= 0.72.0)
     rubocop-rspec (1.39.0)
       rubocop (>= 0.68.1)
+    ruby-debug-ide (0.7.2)
+      rake (>= 0.8.1)
     ruby-graphviz (1.2.5)
       rexml
     ruby-progressbar (1.10.1)
@@ -267,6 +272,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   coffee-rails (~> 4.2)
+  debase
   devise_token_auth
   factory_bot_rails
   faker
@@ -281,6 +287,7 @@ DEPENDENCIES
   rspec-rails
   rubocop-rails
   rubocop-rspec
+  ruby-debug-ide
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
