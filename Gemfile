@@ -42,17 +42,19 @@ gem "devise_token_auth"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem "annotate"
+  gem "annotate" # モデルにスキーマを出力
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "factory_bot_rails"
-  gem "faker"
-  gem "pry-byebug"
-  gem "pry-rails"
-  gem "rails-erd"
+  gem "debase" # rubymineデバックツール
+  gem "factory_bot_rails" # rspecのダミーデータ作成
+  gem "faker" # rspecのダミーデータ作成
+  gem "pry-byebug" # デバックツール
+  gem "pry-rails" # デバックツール
+  gem "rails-erd" # ER図を出力
   gem "rspec-rails"
   gem "rspec_junit_formatter"
   gem "rubocop-rails"
   gem "rubocop-rspec"
+  gem "ruby-debug-ide" # rubymineデバックツール
 end
 
 group :development do
