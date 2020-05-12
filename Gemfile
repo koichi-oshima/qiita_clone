@@ -56,6 +56,7 @@ group :development, :test do
   gem "rubocop-rails"
   gem "rubocop-rspec"
   gem "ruby-debug-ide" # rubymineデバックツール
+  gem "debase" # rubymineデバックツール
 end
 
 group :development do
