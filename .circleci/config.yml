@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Bundle Install Dependencies
           command: |
-            bundle check --path=vendor/bundle || bundle install --path vendor/bundle --clean --jobs 4 --retry 3
+            bundle install --path vendor/bundle
       - save_cache:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
           paths:
@@ -56,6 +56,7 @@ jobs:
           key: v1-qiita_clone-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - run: bundle install
       - run:
           name: Watting stand up database
           command: |
@@ -63,7 +64,7 @@ jobs:
             tcp://127.0.0.1:3306 -timeout 120s
       # Database setup
       - run: mv ./config/database.yml.ci ./config/database.yml
-      - install_bundler
+      - run: bundle install
       - run:
           name: Testing DB migration and seed
           command: |
@@ -95,7 +96,7 @@ jobs:
           key: v1-qiita_clone-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache: # vendor/bundleを復元
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-      - install_bundler
+      - run: bundle install
       - run:
           name: Execute rubocop
           command: |
