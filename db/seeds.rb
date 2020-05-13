@@ -11,6 +11,7 @@ ActiveRecord::Base.transaction do
     name = Faker::Internet.username(specifier: 3..20) # バリデーションの文字数制限に当てはめる
     email = "#{_n}_" + Faker::Internet.email
     # password = Faker::Internet.password(min_length: 8, max_length: 20, mix_case: true)
+    # TODO Fakerでダミーデータがバリデーションを通るデータが生成できるか確認する。
     password = "Vg5mSvY1UeRg7"
     User.create!(
       name: name,
