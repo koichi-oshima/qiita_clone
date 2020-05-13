@@ -8,7 +8,7 @@ executors:
           BUNDLE_JOBS: 4
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
-          BUNDLER_VERSION: 2.0.1
+          BUNDLER_VERSION: 2.1.4
       - image: circleci/mysql:latest
         command: mysqld --default-authentication-plugin=mysql_native_password
         environment:
@@ -19,7 +19,7 @@ commands:
   install_bundler:
     description: Bundler install
     steps:
-      - run: gem install bundler
+      - run: gem install bundler -v 2.1.4
 
 jobs:
   fetch_source_code:
