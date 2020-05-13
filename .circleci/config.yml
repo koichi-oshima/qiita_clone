@@ -19,7 +19,7 @@ commands:
   install_bundler:
     description: Bundler install
     steps:
-      - run: gem install bundler -v 2.1.4
+      - run: gem install bundler:2.1.4
 
 jobs:
   fetch_source_code:
