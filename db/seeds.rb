@@ -12,10 +12,10 @@ ActiveRecord::Base.transaction do
     email = "#{_n}_" + Faker::Internet.email
     password = Faker::Internet.password(min_length: 8, max_length: 20, mix_case: true)
     User.create!(
-        name: name,
-        email: email,
-        password: password,
-        )
+      name: name,
+      email: email,
+      password: password,
+    )
   end
 
   100.times do
@@ -23,10 +23,10 @@ ActiveRecord::Base.transaction do
     body = Faker::Lorem.paragraph
     user_id = User.pluck(:id).sample # sampleメソッドでUserテーブルのuser_idをランダム取得
     Article.create!(
-        title: title,
-        body: body,
-        user_id: user_id,
-        )
+      title: title,
+      body: body,
+      user_id: user_id,
+    )
   end
 
   300.times do
@@ -39,10 +39,10 @@ ActiveRecord::Base.transaction do
     next unless article_id # article_idがfalseの場合、次のループへ
 
     Comment.create!(
-        body: body,
-        user_id: user_id,
-        article_id: article_id, #user_id以外のid(user_ids)が作成した記事に投稿する(投稿者と記事作成者が同一にならないようにする)
-        )
+      body: body,
+      user_id: user_id,
+      article_id: article_id, # user_id以外のid(user_ids)が作成した記事に投稿する(投稿者と記事作成者が同一にならないようにする)
+    )
   end
 
   Article.find_each do |article|
@@ -51,9 +51,9 @@ ActiveRecord::Base.transaction do
       next unless [true, false].sample # レコードを投稿する（いいねをする）かをsampleメソッドでランダムにする。
 
       ArticleLike.create!(
-          user_id: other_user_id,
-          article: article,
-          )
+        user_id: other_user_id,
+        article: article,
+      )
     end
   end
 end
