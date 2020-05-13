@@ -10,7 +10,8 @@ ActiveRecord::Base.transaction do
   20.times do |_n|
     name = Faker::Internet.username(specifier: 3..20) # バリデーションの文字数制限に当てはめる
     email = "#{_n}_" + Faker::Internet.email
-    password = Faker::Internet.password(min_length: 8, max_length: 20, mix_case: true)
+    # password = Faker::Internet.password(min_length: 8, max_length: 20, mix_case: true)
+    password = "Vg5mSvY1UeRg7"
     User.create!(
       name: name,
       email: email,
