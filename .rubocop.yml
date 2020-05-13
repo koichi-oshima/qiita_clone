@@ -13,6 +13,7 @@ AllCops:
   TargetRubyVersion: 2.6
 
 # 例外を追加
+# TODO 除外設定が適切か確認する。現状設定はcircle-ciを成功させるため。
 # TO DO
 RSpec/MultipleExpectations:
   Exclude:
