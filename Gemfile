@@ -50,9 +50,9 @@ group :development, :test do
   gem "pry-rails"
   gem "rails-erd"
   gem "rspec-rails"
+  gem "rspec_junit_formatter"
   gem "rubocop-rails"
   gem "rubocop-rspec"
-  gem "rspec_junit_formatter"
 end
 
 group :development do
