@@ -50,7 +50,7 @@ RSpec.describe "Api::V1::Articles", type: :request do
     let(:current_user) { create(:user) }
     # binding.pry
     before do
-      allow_any_instance_of(Api::V1::Apicontroller).to receive(:current_user).and_return(current_user)
+      allow_any_instance_of(Api::V1::ApiController).to receive(:current_user).and_return(current_user)
     end
     # binding.pry
 
