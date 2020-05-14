@@ -45,7 +45,6 @@ group :development, :test do
   gem "annotate" # モデルにスキーマを出力
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "debase" # rubymineデバックツール
-  gem "debase" # rubymineデバックツール
   gem "factory_bot_rails" # rspecのダミーデータ作成
   gem "faker" # rspecのダミーデータ作成
   gem "pry-byebug" # デバックツール
@@ -56,7 +55,6 @@ group :development, :test do
   gem "rubocop-rails"
   gem "rubocop-rspec"
   gem "ruby-debug-ide" # rubymineデバックツール
-  gem "debase" # rubymineデバックツール
 end
 
 group :development do
