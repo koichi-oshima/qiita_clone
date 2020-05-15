@@ -27,6 +27,10 @@ module QiitaClone
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    # POSTした際にエラーが発生したので、追加
+    # https://qiita.com/Philomagi/items/4fc83d49a6065002273e
+    config.middleware.use ActionDispatch::Flash
+
     # Don't generate system test files.
     config.generators.system_tests = nil
 
