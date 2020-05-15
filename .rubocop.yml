@@ -37,3 +37,7 @@ Rails/BulkChangeTable:
   Exclude:
     - 'db/*'
     - 'db/migrate/*'
+
+# allow_any_instance_ofを利用できるようにするため
+RSpec/AnyInstance:
+  Enabled: false
